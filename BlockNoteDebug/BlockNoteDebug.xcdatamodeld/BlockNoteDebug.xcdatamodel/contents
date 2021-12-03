@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <entity name="Item" representedClassName="Item" syncable="YES" codeGenerationType="class">
-        <attribute name="timestamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Note" representedClassName=".Note" syncable="YES">
+        <attribute name="noteID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="noteIsMarked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="noteLevel" optional="YES" attributeType="String"/>
+        <attribute name="noteName" optional="YES" attributeType="String"/>
+        <attribute name="noteType" optional="YES" attributeType="String"/>
+        <relationship name="noteItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="NoteItem" inverseName="note" inverseEntity="NoteItem"/>
+    </entity>
+    <entity name="NoteItem" representedClassName=".NoteItem" syncable="YES">
+        <attribute name="noteItemName" optional="YES" attributeType="String"/>
+        <attribute name="noteItemOrder" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="noteItemText" optional="YES" attributeType="String"/>
+        <attribute name="noteItemType" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="noteItems" inverseEntity="Note"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="44"/>
+        <element name="Note" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="NoteItem" positionX="-54" positionY="-9" width="128" height="104"/>
     </elements>
 </model>

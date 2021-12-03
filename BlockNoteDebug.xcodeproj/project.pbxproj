@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E39A70C275AB9AF0048BF1D /* Note+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39A708275AB9AF0048BF1D /* Note+CoreDataClass.swift */; };
+		4E39A70D275AB9AF0048BF1D /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39A709275AB9AF0048BF1D /* Note+CoreDataProperties.swift */; };
+		4E39A70E275AB9AF0048BF1D /* NoteItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39A70A275AB9AF0048BF1D /* NoteItem+CoreDataClass.swift */; };
+		4E39A70F275AB9AF0048BF1D /* NoteItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39A70B275AB9AF0048BF1D /* NoteItem+CoreDataProperties.swift */; };
+		4E39A712275ABD640048BF1D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39A711275ABD640048BF1D /* Extensions.swift */; };
 		4E75C71F275A344D004BAF91 /* BlockNoteDebugApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75C71E275A344D004BAF91 /* BlockNoteDebugApp.swift */; };
 		4E75C721275A344D004BAF91 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E75C720275A344D004BAF91 /* ContentView.swift */; };
 		4E75C723275A3450004BAF91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E75C722275A3450004BAF91 /* Assets.xcassets */; };
@@ -16,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E39A708275AB9AF0048BF1D /* Note+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4E39A709275AB9AF0048BF1D /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4E39A70A275AB9AF0048BF1D /* NoteItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		4E39A70B275AB9AF0048BF1D /* NoteItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NoteItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		4E39A711275ABD640048BF1D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4E75C71B275A344D004BAF91 /* BlockNoteDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockNoteDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E75C71E275A344D004BAF91 /* BlockNoteDebugApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockNoteDebugApp.swift; sourceTree = "<group>"; };
 		4E75C720275A344D004BAF91 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +46,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E39A710275AB9B50048BF1D /* CoreDataFolder */ = {
+			isa = PBXGroup;
+			children = (
+				4E39A708275AB9AF0048BF1D /* Note+CoreDataClass.swift */,
+				4E39A70A275AB9AF0048BF1D /* NoteItem+CoreDataClass.swift */,
+				4E39A709275AB9AF0048BF1D /* Note+CoreDataProperties.swift */,
+				4E39A70B275AB9AF0048BF1D /* NoteItem+CoreDataProperties.swift */,
+			);
+			path = CoreDataFolder;
+			sourceTree = "<group>";
+		};
 		4E75C712275A344D004BAF91 = {
 			isa = PBXGroup;
 			children = (
@@ -59,7 +80,9 @@
 				4E75C720275A344D004BAF91 /* ContentView.swift */,
 				4E75C722275A3450004BAF91 /* Assets.xcassets */,
 				4E75C727275A3450004BAF91 /* Persistence.swift */,
+				4E39A711275ABD640048BF1D /* Extensions.swift */,
 				4E75C729275A3450004BAF91 /* BlockNoteDebug.xcdatamodeld */,
+				4E39A710275AB9B50048BF1D /* CoreDataFolder */,
 				4E75C724275A3450004BAF91 /* Preview Content */,
 			);
 			path = BlockNoteDebug;
@@ -144,9 +167,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E75C728275A3450004BAF91 /* Persistence.swift in Sources */,
+				4E39A712275ABD640048BF1D /* Extensions.swift in Sources */,
 				4E75C721275A344D004BAF91 /* ContentView.swift in Sources */,
+				4E39A70C275AB9AF0048BF1D /* Note+CoreDataClass.swift in Sources */,
 				4E75C71F275A344D004BAF91 /* BlockNoteDebugApp.swift in Sources */,
+				4E39A70F275AB9AF0048BF1D /* NoteItem+CoreDataProperties.swift in Sources */,
+				4E39A70E275AB9AF0048BF1D /* NoteItem+CoreDataClass.swift in Sources */,
 				4E75C72B275A3450004BAF91 /* BlockNoteDebug.xcdatamodeld in Sources */,
+				4E39A70D275AB9AF0048BF1D /* Note+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
