@@ -8,6 +8,11 @@
 import SwiftUI
 import Foundation
 
+
+func returnColorFromString(nameOfColor: String) -> Color {
+    return Color.init(nameOfColor)
+}
+
 extension Color {
     static let darkBack = Color("DarkBackground")
     static let lightPart = Color("LightPart")

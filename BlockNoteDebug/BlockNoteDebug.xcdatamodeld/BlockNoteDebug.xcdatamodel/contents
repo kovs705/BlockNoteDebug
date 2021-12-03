@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GroupType" representedClassName=".GroupType" syncable="YES">
+        <attribute name="groupColor" optional="YES" attributeType="String"/>
+        <attribute name="groupName" optional="YES" attributeType="String"/>
+        <attribute name="number" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="noteTypes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="typeOfNote" inverseEntity="Note"/>
+    </entity>
     <entity name="Note" representedClassName=".Note" syncable="YES">
         <attribute name="noteID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="noteIsMarked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -7,6 +13,7 @@
         <attribute name="noteName" optional="YES" attributeType="String"/>
         <attribute name="noteType" optional="YES" attributeType="String"/>
         <relationship name="noteItems" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="NoteItem" inverseName="note" inverseEntity="NoteItem"/>
+        <relationship name="typeOfNote" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GroupType" inverseName="noteTypes" inverseEntity="GroupType"/>
     </entity>
     <entity name="NoteItem" representedClassName=".NoteItem" syncable="YES">
         <attribute name="noteItemName" optional="YES" attributeType="String"/>
@@ -16,7 +23,8 @@
         <relationship name="note" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Note" inverseName="noteItems" inverseEntity="Note"/>
     </entity>
     <elements>
-        <element name="Note" positionX="-63" positionY="-18" width="128" height="119"/>
+        <element name="Note" positionX="-63" positionY="-18" width="128" height="134"/>
         <element name="NoteItem" positionX="-54" positionY="-9" width="128" height="104"/>
+        <element name="GroupType" positionX="-36" positionY="54" width="128" height="89"/>
     </elements>
 </model>

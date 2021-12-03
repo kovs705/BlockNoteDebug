@@ -11,11 +11,22 @@ import CoreData
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: Note.entity(), sortDescriptors: [NSSortDescriptor(key: "noteID", ascending: true)], predicate: nil) var notes: FetchedResults<Note>
-
+    
     var body: some View {
         NavigationView {
-            Text("Hello")
+            VStack {
+                List {
+                    ForEach(notes, id: \.self) { note in
+                        NavigationLink(destination: NoteView(note: note)) {
+                            Text(note.wrappedNoteName)
+                        }
+                    }
+                }
+                // List
+            }
+            // VStack
         }
+        
     }
 
     private func addItem() {
