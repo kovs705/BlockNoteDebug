@@ -13,20 +13,22 @@ struct NoteView: View {
     @ObservedObject var note: Note
     
     var body: some View {
-        VStack {
-            Text(note.wrappedNoteName)
-                .bold()
-                .font(.title)
-            Divider()
-                .padding(10)
-            
-            List {
+        ScrollView {
+            VStack {
+                Text(note.wrappedNoteName)
+                    .bold()
+                    .font(.title)
+                Divider()
+                    .padding(10)
+                
                 ForEach(note.noteItemArray, id: \.self) { noteItem in
                     Text(noteItem.wrappedNoteItemName)
                 }
+                
             }
-            
+            // VStack
         }
+        // ScrollView
     }
 }
 

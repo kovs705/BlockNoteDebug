@@ -15,17 +15,25 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                Button(action: {
+                    addItem()
+                }) {
+                    Text("Tapp to add a note")
+                }
                 List {
                     ForEach(notes, id: \.self) { note in
                         NavigationLink(destination: NoteView(note: note)) {
                             Text(note.wrappedNoteName)
                         }
                     }
+                    .onDelete(perform: deleteItems)
                 }
+                .frame(width: UIScreen.main.bounds.width - 20, height: 700)
                 // List
             }
             // VStack
         }
+        .navigationTitle("Debug App")
         
     }
 
